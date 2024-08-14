@@ -3,6 +3,7 @@ package com.curso_heroku_spring.todolist.service;
 
 import com.curso_heroku_spring.todolist.model.Task;
 import com.curso_heroku_spring.todolist.repository.TaskRepository;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class TaskService {
 
     @Autowired
