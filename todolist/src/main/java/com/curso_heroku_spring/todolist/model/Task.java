@@ -20,7 +20,7 @@ public class Task {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private  Long id;
 
     @Column(nullable = false)
     private String title;
@@ -31,13 +31,12 @@ public class Task {
     @Column(nullable = false)
     private LocalDateTime deadline;
 
-
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
     @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+    private  LocalDateTime updatedAt;
 
 }
