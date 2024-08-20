@@ -10,27 +10,30 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+
 @Configuration
 @EnableSwagger2
 public class SwaggerConfiguration {
 
     @Bean
     public Docket api(){
-        return new Docket(
+        return  new Docket(
                 DocumentationType.SWAGGER_2)
-                .select().apis(RequestHandlerSelectors
-                        .basePackage("com.curso_heroku_spring.todolist.controller"))
+                .select()
+                .apis(RequestHandlerSelectors.
+                        basePackage("com.kamilacode.todolistyoutube.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .useDefaultResponseMessages(true)
                 .apiInfo(apiInfo());
+
     }
 
-    private ApiInfo apiInfo() {
 
+    private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
-                .title("To do List")
-                .description("Aplicacao CRUD")
+                .title("To do list  - youtube")
+                .description("Aplicacao gerenciadora de tarefas")
                 .version("1.0.0")
                 .build();
     }
